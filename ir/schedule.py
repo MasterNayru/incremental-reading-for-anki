@@ -1,13 +1,13 @@
 import random
 
 try:
-    from PyQt5.QtCore import Qt
-    from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QVBoxLayout
-    ANKI_21 = True
-except ImportError:
     from PyQt4.QtCore import Qt
     from PyQt4.QtGui import QDialog, QDialogButtonBox, QVBoxLayout
     ANKI_21 = False
+except ImportError:
+    from PyQt5.QtCore import Qt
+    from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QVBoxLayout
+    ANKI_21 = True
 
 from aqt import mw
 from aqt.utils import showInfo, tooltip
